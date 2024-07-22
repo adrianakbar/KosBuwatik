@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  border-bottom: 1px solid #d8d3d3;
+  padding-left: 5%;
+  background-color: #fff;
+}
+
+.navbar-nav {
+  margin-left: 52%;
+}
+
+.nav-link {
+  margin: 0 15px; /* Adjust the value to set the desired spacing */
+  position: relative; /* Required for the underline effect */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f27136;
+}
+
+.nav-link:active,
+.nav-link.active {
+  color: #f27136;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #f27136; /* Color of the underline */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: #f27136; /* Color of the underline */
+}
+
+.deskripsi {
+  padding-top: 15%;
+  padding-left: 10%;
+  font-size: large;
+}
+
+.deskripsi h5 {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  margin-bottom: 3%;
+  font-size: 200%;
+}
+
+h5 span {
+  font-family: "Kanit", sans-serif;
+  color: #f27136;
+}
+
+.receptionist {
+  padding: 10% 5%;
+}
+
+.cardcontainer {
+  padding: 5% 10%;
+}
+
+.cardcontainer h2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: #f27136;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Card styles */
+.card {
+  margin: 20px;
+  border: none;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gambarfasilitas {
+  border-radius: 7px 7px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #f27136;
+  margin-bottom: 7%;
+}
+
+.card-text {
+  color: #495057;
+  font-size: 1rem;
+}
+
+.fasilitasicon {
+  margin-bottom: 7%;
+}
+
+.btn-primary {
+  background-color: #f27136;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d45a23;
+}
+
+/* Star rating styles */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-rating .ri-star-fill {
+  font-size: 1.5rem;
+  margin: 0 2px;
+}
+
+/* Harga section styles */
+.harga-container {
+  padding: 5% 10%;
+}
+
+.harga-container h2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: #f27136;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.harga-card {
+  margin: 20px;
+  border: none;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.harga-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.harga-card .card-body {
+  padding: 20px;
+}
+
+.harga-card .btn-primary {
+  background-color: #f27136;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.harga-card .btn-primary:hover {
+  background-color: #d45a23;
+}

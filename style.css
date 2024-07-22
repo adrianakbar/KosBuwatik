@@ -77,6 +77,10 @@ h5 span {
   padding: 10% 5%;
 }
 
+.receptionist img {
+  width: 100%;
+}
+
 .cardcontainer {
   padding: 5% 10%;
 }
@@ -188,4 +192,36 @@ h5 span {
 
 .harga-card .btn-primary:hover {
   background-color: #d45a23;
+}
+
+@media (max-width: 576px) {
+  .row.deskripsi-receptionist {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .deskripsi {
+    width: 100%;
+    text-align: justify;
+    padding-right: 9%;
+  }
+
+  .deskripsi h5 {
+    font-size: 120%;
+    text-align: center;
+  }
+
+  .receptionist {
+    padding: 5%;
+  }
+
+  .receptionist img {
+    width: 200%;
+    margin-left: -55%;
+  }
+
+  .cardcontainer {
+    padding: 5%;
+  }
 }

@@ -78,11 +78,6 @@ body {
   transform: scale(1.1);
 }
 
-.nav-link:active,
-.nav-link.active {
-  color: #f27136;
-}
-
 .nav-link::after {
   content: "";
   position: absolute;

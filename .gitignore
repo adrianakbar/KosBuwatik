@@ -1,0 +1,24 @@
+node_modules/
+.next/
+out/
+dist/
+.vercel/
+.env*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+
+# local Next experiment (site deploys static root index.html)
+mockup/
+public/
+src/
+components.json
+next.config.js
+next-env.d.ts
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+package.json
+package-lock.json

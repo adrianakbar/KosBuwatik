@@ -77,14 +77,23 @@ body { font-family: var(--font-sans); color: var(--charcoal); background: var(--
 .section-nav a:hover, .section-nav a.active { color:var(--terracotta); border-bottom-color:var(--terracotta); }
 .divider { width:60px; height:1px; background:var(--terracotta); margin:0 auto 1.25rem; opacity:.5; }
 
-/* ── FASILITAS (Experiences-style cards) ── */
-.facilities-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:1.25rem; max-width:1200px; margin:0 auto; }
-.facility-card { position:relative; border-radius:12px; overflow:hidden; aspect-ratio:4/5; cursor:pointer; }
-.facility-card img { width:100%; height:100%; object-fit:cover; transition: transform .6s ease; }
-.facility-card:hover img { transform: scale(1.05); }
-.facility-card-overlay { position:absolute; inset:0; background: linear-gradient(to top, rgba(42,42,42,.7) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:1.5rem; }
-.facility-card h3 { font-family: var(--font-serif); font-size:1.3rem; color:#fff; margin-bottom:.4rem; }
-.facility-card p { color:rgba(255,255,255,.8); font-size:.82rem; line-height:1.5; font-weight:300; }
+/* ── FASILITAS (large photo + caption below) ── */
+.facilities-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:1.75rem; max-width:1100px; margin:0 auto; }
+.facility-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 28px rgba(42,42,42,.05);
+  transition: transform .3s, box-shadow .3s;
+}
+.facility-card:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(42,42,42,.08); }
+.facility-card-media { position: relative; aspect-ratio: 16/10; overflow: hidden; background: #eee; }
+.facility-card-media img { width:100%; height:100%; object-fit:cover; transition: transform .6s ease; display:block; }
+.facility-card:hover .facility-card-media img { transform: scale(1.04); }
+.facility-card-body { padding: 1.15rem 1.25rem 1.35rem; }
+.facility-card h3 { font-family: var(--font-serif); font-size:1.25rem; color: var(--charcoal); margin-bottom:.4rem; font-weight:500; }
+.facility-card p { color: var(--text-secondary); font-size:.88rem; line-height:1.65; font-weight:300; }
 
 /* ── WELLNESS-style split ── */
 .split { display:grid; grid-template-columns: 1fr 1fr; gap:0; max-width:1280px; margin:0 auto; align-items:center; min-height:500px; }
@@ -188,7 +197,7 @@ body { font-family: var(--font-sans); color: var(--charcoal); background: var(--
 
 /* ── RESPONSIVE ── */
 @media (max-width:1100px) {
-  .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+  .facilities-grid { grid-template-columns: 1fr; }
 }
 @media (max-width:900px) {
   .nav-links { display:none; }
@@ -206,11 +215,11 @@ body { font-family: var(--font-sans); color: var(--charcoal); background: var(--
   .section { padding:4rem 1.25rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .nav-inner { padding:0 1.25rem; }
-  .facilities-grid { grid-template-columns: 1fr 1fr; gap:.85rem; }
-  .facility-card { aspect-ratio: 3/4; }
-  .facility-card h3 { font-size:1rem; }
-  .facility-card p { font-size:.72rem; }
-  .facility-card-overlay { padding:1rem; }
+  .facilities-grid { grid-template-columns: 1fr; gap:1.1rem; }
+  .facility-card-media { aspect-ratio: 16/11; }
+  .facility-card h3 { font-size:1.1rem; }
+  .facility-card p { font-size:.84rem; }
+  .facility-card-body { padding: 1rem 1.05rem 1.15rem; }
   .testi-grid { gap:.75rem; }
   .testi-card {
     flex-basis: min(230px, 70vw);
@@ -294,29 +303,37 @@ body { font-family: var(--font-sans); color: var(--charcoal); background: var(--
   </div>
   <div class="facilities-grid">
     <div class="facility-card reveal">
-      <img src="assets/kamar.jpg" alt="Kamar Tidur">
-      <div class="facility-card-overlay">
+      <div class="facility-card-media">
+        <img src="assets/kamar.jpg" alt="Kamar Tidur">
+      </div>
+      <div class="facility-card-body">
         <h3>Kamar Tidur</h3>
         <p>Kasur nyaman, lemari, meja belajar, KM dalam, kipas/AC, WiFi, dan cermin.</p>
       </div>
     </div>
     <div class="facility-card reveal">
-      <img src="assets/km.jpg" alt="Kamar Mandi">
-      <div class="facility-card-overlay">
+      <div class="facility-card-media">
+        <img src="assets/km.jpg" alt="Kamar Mandi">
+      </div>
+      <div class="facility-card-body">
         <h3>Kamar Mandi</h3>
         <p>Kamar mandi dalam, keran air, ember, dan perlengkapan mandi dasar.</p>
       </div>
     </div>
     <div class="facility-card reveal">
-      <img src="assets/parkir.jpg" alt="Area Parkir">
-      <div class="facility-card-overlay">
+      <div class="facility-card-media">
+        <img src="assets/parkir.jpg" alt="Area Parkir">
+      </div>
+      <div class="facility-card-body">
         <h3>Area Parkir</h3>
         <p>Luas, berkanopi, muat mobil dan motor. Dilengkapi kursi tamu dan keamanan 24 jam.</p>
       </div>
     </div>
     <div class="facility-card reveal">
-      <img src="assets/dapur.jpg" alt="Dapur Bersama">
-      <div class="facility-card-overlay">
+      <div class="facility-card-media">
+        <img src="assets/dapur.jpg" alt="Dapur Bersama">
+      </div>
+      <div class="facility-card-body">
         <h3>Dapur Bersama</h3>
         <p>Kulkas, kompor, alat masak dan makan, serta area cuci yang bersih.</p>
       </div>
@@ -355,7 +372,8 @@ body { font-family: var(--font-sans); color: var(--charcoal); background: var(--
     <p>Dua pilihan tipe kamar yang dirancang sesuai kebutuhan dan budget Anda. Listrik token terpisah.</p>
   </div>
   <div class="rooms-grid">
-    <div class="room-card reveal">
+    <div class="room-card featured reveal">
+      <div class="room-badge">Best Value</div>
       <div class="room-card-img">
         <img src="assets/kamar.jpg" alt="Kamar Standar">
       </div>
@@ -372,8 +390,7 @@ body { font-family: var(--font-sans); color: var(--charcoal); background: var(--
         <a href="https://wa.me/6285172252910?text=Halo%2C%20saya%20tertarik%20kamar%20Standar%20Kos%20Buwatik" class="btn-primary">Pesan Sekarang</a>
       </div>
     </div>
-    <div class="room-card featured reveal">
-      <div class="room-badge">Best Value</div>
+    <div class="room-card reveal">
       <div class="room-card-img">
         <img src="assets/kamar.jpg" alt="Kamar Premium">
       </div>
